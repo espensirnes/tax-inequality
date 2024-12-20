@@ -4,7 +4,7 @@
 import sys
 import pymssql 
 import csv
-import Functions as fu
+import functions as fu
 import numpy as np
 import db_create
 import db_indicies
@@ -15,7 +15,7 @@ dbase='OSEData'
 
 def connect(db):
 	with open('credentials') as f:
-		hst, un, pw = f.read().split('\n')[3:]
+		hst, un, pw = f.read().split('\n')[2:]
 	conn = pymssql.connect(host=hst, user=un, 
 	                       password=pw, database=db)  
 	crsr=conn.cursor()
